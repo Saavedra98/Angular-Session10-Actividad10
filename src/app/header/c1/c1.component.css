@@ -1,0 +1,14 @@
+.container{
+    margin: 30px auto;
+    
+}
+
+.navbar{
+    border-radius: 10px;
+    background-color: rgb(202, 201, 201);
+}
+
+a{
+    font-size: 35px;
+    font-weight: 500;
+}
