@@ -1,3 +1,4 @@
+import { TareaService } from './service/tarea.service';
 import { HeaderModule } from './header/header.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +15,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     HeaderModule
   ],
-  providers: [],
+  providers: [TareaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

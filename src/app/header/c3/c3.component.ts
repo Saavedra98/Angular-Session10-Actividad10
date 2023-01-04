@@ -1,3 +1,4 @@
+import { TareaService } from './../../service/tarea.service';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
@@ -8,15 +9,23 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class C3Component {
 
 
+  tarea='';
+  descripcion='';
 
-  tareas = [
-    ['Tarea1', 'Descripcion1'], 
-  ];
+  constructor(private almacenarService:TareaService) { }
 
-  enviar(tareaInput:String, descripcionInput: String){
-    this.tareas.push([String(tareaInput), String(descripcionInput)]);
+  enviar(){
+    
+    this.almacenarService.almacenarTareas(this.tarea, this.descripcion);
   } 
 
 
 
 }
+
+
+// this.tareas.push([String(tareaInput), String(descripcionInput)]);
+
+// tareas = [
+  //   ['Tarea1', 'Descripcion1'], 
+  // ];

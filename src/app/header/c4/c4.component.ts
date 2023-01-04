@@ -1,3 +1,4 @@
+import { TareaService } from './../../service/tarea.service';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,8 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class C4Component {
 
-  @Input() tareasrecibidas: any;
+  almacenTareas:string[]=[]
+  
 
+  constructor(private almacenService:TareaService) { }
 
+  ngOnInit(): void {
+    this.almacenTareas=this.almacenService.TareasyDescripcion
+  }
 
 }
