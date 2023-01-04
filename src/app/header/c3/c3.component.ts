@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-c3',
@@ -7,13 +7,16 @@ import { Component } from '@angular/core';
 })
 export class C3Component {
 
+
+
   tareas = [
     ['Tarea1', 'Descripcion1'], 
   ];
 
-  enviar(){
-    
-  }
+  enviar(tareaInput:String, descripcionInput: String){
+    this.tareas.push([String(tareaInput), String(descripcionInput)]);
+  } 
+
 
 
 }
